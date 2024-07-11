@@ -18,10 +18,11 @@ namespace flipkart
 
 
             driver.FindElement(By.XPath("//div[text()='Apple iPhone 13 (Pink, 128 GB)']")).Click();
-            //Thread.Sleep(7000);
+            
             string ChildWindowName = driver.WindowHandles[1];
             driver.SwitchTo().Window(ChildWindowName);
-            bool s5 = driver.FindElement(By.XPath("//button[@class='QqFHMw vslbG+ In9uk2']")).Displayed;
+            Thread.Sleep(7000);
+            var s5 = driver.FindElement(By.XPath("//button[@class='QqFHMw vslbG+ In9uk2']")).Displayed;
             Console.WriteLine(s5);
 
 

@@ -30,16 +30,16 @@ namespace Flipkart.BaseClasses
         public void InitScript()
 
         {
-
-
-
-            driver = new ChromeDriver();
+            string browserName = ConfigurationManager.AppSettings["browserName"];
+            InitBrowser(browserName);
+            //driver.find
+                                                                                                   //driver = new ChromeDriver();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-
-            driver.Navigate().GoToUrl("https://www.flipkart.com/");
+            string url = ConfigurationManager.AppSettings["url"];
+            driver.Navigate().GoToUrl(url);
+                                                                                              // driver.Navigate().GoToUrl("https://www.flipkart.com/");
 
             driver.Manage().Window.Maximize();
-
 
         }
         public IWebDriver getDriver()

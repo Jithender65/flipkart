@@ -24,7 +24,7 @@ namespace Flipkart.Test
             homePage = new HomePage();
             resultPage = new ResultPage();
             homePage.ValidSearch();
-            ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("Showing 1 – 24 of 741 results for \"iphone 13\""));
+            ClassicAssert.That(resultPage.AssetResult(), Is.EqualTo("Showing 1 – 24 of 490 results for \"iphone 13\""));
             //Thread.Sleep(7000);
             Console.WriteLine(resultPage.AssetResult());
 

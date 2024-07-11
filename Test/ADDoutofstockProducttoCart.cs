@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using Flipkart.BaseClasses;
+using NUnit.Framework.Legacy;
 
 namespace flipkart
 {
@@ -25,7 +26,9 @@ namespace flipkart
             driver.FindElement(By.XPath("//span[@class='i40dM4']")).Click();
             Thread.Sleep(7000);
             bool s5 = driver.FindElement(By.XPath("//button[@class='QqFHMw vslbG+ In9uk2 _7dtcvJ']")).Enabled;
-            Console.WriteLine(s5);
+            //Console.WriteLine(s5);
+            ClassicAssert.False(s5);
+            
         }
     }
 }
